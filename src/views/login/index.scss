@@ -1,0 +1,54 @@
+@import "~@/assets/styles/common/mixins.scss";
+
+.page-login {
+  font-size: 16px;
+  overflow: hidden;
+
+  .logo {
+    margin: 79px auto 40px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+
+    img {
+      height: 60px;
+    }
+  }
+
+  .login-form {
+    .form-group {
+      @include border-bottom;
+      line-height: 55px;
+      margin: 0 25px;
+      position: relative;
+
+      .input-control {
+        height: 15px;
+        line-height: 15px;
+        padding: 20px 0;
+        width: 100%;
+        font-size: 15px;
+        color: #191a1b;
+        border: 0;
+        outline-width: 0;
+      }
+    }
+
+    .submit {
+      width: calc(100% - 50px);
+      line-height: 45px;
+      font-size: 16px;
+      margin: 70px 25px 0;
+      border-radius: 3px;
+      text-align: center;
+      background-color: #ff5f16;
+      height: 44px;
+      color: #fff;
+      border: none;
+
+      &[disabled] {
+        background-color: #ccc;
+      }
+    }
+  }
+}

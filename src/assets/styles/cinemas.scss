@@ -1,0 +1,129 @@
+.page-home-cinemas {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 3000;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    .left,
+    .right {
+      flex: 1;
+      color: #191a1b;
+    }
+    .title {
+      width: 232px;
+    }
+    div:nth-child(1) {
+      color: #191a1b;
+      font-size: 13px;
+    }
+    div:nth-child(2) {
+      color: #191a1b;
+      font-size: 17px;
+    }
+    .right {
+      font-size: 20px;
+    }
+  }
+  .cinena-list {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 44px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 2000;
+    letter-spacing: -0.2px;
+    .van-dropdown-menu__item {
+      width: 100%;
+      padding-right: 15px !important;
+      .van-dropdown-menu__title {
+        font-size: 14px;
+        color: #191a1b;
+      }
+    }
+  }
+  ul {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-top: 94px;
+    padding-bottom: 50px;
+    li {
+      padding: 15px;
+      height: 45px;
+      display: flex;
+      position: relative;
+      div:nth-child(1) {
+        flex: 1;
+        overflow: hidden;
+        text-align: left;
+        p:nth-child(1) {
+          color: #191a1b;
+          font-size: 15px;
+          max-width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        p:nth-child(2) {
+          color: #797d82;
+          font-size: 12px;
+          margin-top: 5px;
+          max-width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      div:nth-child(2) {
+        width: 70px;
+        p:nth-child(1) {
+          color: #ff5f16;
+          font-size: 15px;
+          &::before {
+            content: '￥';
+            font-size: 12px;
+          }
+          &::after {
+            content: '起';
+            font-size: 12px;
+          }
+        }
+        p:nth-child(2) {
+          color: #797d82;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.base {
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #ededed;
+    color: #ededed;
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
